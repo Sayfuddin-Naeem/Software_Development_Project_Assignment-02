@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="bootstrap-5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawesome-6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-first">
+
+  <!-- Nav Bar Section -->
+  <div class="my-lg-4 my-md-4">
+    <nav class="navbar bg-transparent navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto my-sm-2 mb-lg-0">
+            <li class="nav-item my-sm-1 text-center w-25">
+              <a class="nav-link text-white text-hover me-2 border border-2 rounded brd-color-first active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item my-sm-1 text-center w-25">
+              <a class="nav-link text-white text-hover me-2 border border-2 rounded brd-color-first" href="#">Features</a>
+            </li>
+            <li class="nav-item my-sm-1 text-center w-25">
+              <a class="nav-link text-white text-hover me-2 border border-2 rounded brd-color-first" href="#">Pricing</a>
+            </li>
+            <li class="nav-item my-sm-1 text-center w-25">
+              <a class="nav-link text-white text-hover me-2 border border-2 rounded brd-color-first" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Error Show Section -->
+  <div id="errorShow" class="d-none container w-25 p-3 rounded bg-second text-danger d-flex justify-content-center align-items-center mx-auto my-3">
+  </div>
+
+  <!-- Search Bar Section -->
+  <div class="container my-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form class="d-flex">
+                <input id="searchInput" class="form-control me-2" type="search" placeholder="Find your favourite player" aria-label="Search">
+                <button id="searchBtn" class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+  </div>
+
+  <!-- Main Section -->
+  <div class="row container position-relative">
+    <!-- Card Container Section -->
+    <div id="card-container" class="container card-container col-12 col-md-9 col-lg-9 col-xl-9 d-none d-flex justify-content-center align-items-center border border-2 brd-color-grey rounded p-2">
+      
+    </div>
+
+    <div class="col-2"></div>
+    <!-- Add to Group Section -->
+    <div class="col-3 position-fixed top-0 end-0">
+      <div class="mt-3">
+        <div class="card">
+          <h5 class="card-header text-accent-first text-center">Player Group</h5>
+          <div id="group-main" class="card-body">
+            <p class="btn fs-4 position-relative">
+                Total Member
+                <span id="member" class="position-absolute top-0 start-100 translate-middle badge rounded-pill accent-second">
+                  0
+                </span>
+            </p>
+            <div id="player-container">
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal View Section -->
+    
+
+    <!-- Vertically centered scrollable modal -->
+    <div class="modal fade bg-transparent" id="playerDetailsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h1 class="modal-title text-second fs-3" id="exampleModalLabel">Player Details</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div id="modal-body" class="modal-body">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- The Group Alert Modal -->
+    <div class="modal" id="groupAlert" tabindex="-1" aria-labelledby="groupAlertLabel" aria-hidden="false">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h3 class="modal-title mx-auto text-second" id="groupAlertLabel">Warning !!</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body text-center text-danger fs-3">
+            Group limit exceeded !!<br>You won't be able to add players anymore.
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+<!-- Footer Section -->
+
+  <hr>
+  <div class="footer my-5">
+
+    <p class="text-white text-center">
+      <span class="v-line">Copyright &copy; 2024</span> Sayfuddin Naeem
+    </p>
+    <p class="text-white text-center">
+      Barishal Sador, Barishal, Bangladesh.
+    </p>
+    <div class="d-flex justify-content-evenly w-25 mb-5 mx-auto">
+      <a href="https://www.facebook.com/sayfuddin.naeem.100" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook text-accent-first fs-4"></i>
+      </a>
+      <a href="https://x.com/sayfuddinNaeem" target="_blank" aria-label="Twitter">
+        <i class="fab fa-x-twitter text-accent-first fs-4"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram text-accent-first fs-4"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/sayfuddin-naeem/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin text-accent-first fs-4"></i>
+      </a>
+    </div>
+    
+  </div>
+
+  <script src="bootstrap-5/js/bootstrap.min.js"></script>
+  <script src="fontawesome-6.5.2/js/all.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
