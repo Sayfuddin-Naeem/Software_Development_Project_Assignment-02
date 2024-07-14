@@ -60,10 +60,10 @@ const displayPlayer_InModal = (players)=>{
                     <p class="list-group-item bg-transparent text-justify">Bio:<br> <span class="ms-2">${player.strDescriptionEN}</span></p>
                 </div>
                 <div class="d-flex justify-content-evenly w-25 my-3 mx-auto">
-                    <a href="${player.strFacebook}" target="_blank" aria-label="Facebook">
+                    <a href="https://${player.strFacebook}" target="_blank" aria-label="Facebook">
                         <i class="fab fa-facebook text-accent-first fs-4"></i>
                     </a>
-                    <a href="${player.strInstagram}" target="_blank" aria-label="Instagram">
+                    <a href="https://www.${player.strInstagram}" target="_blank" aria-label="Instagram">
                         <i class="fab fa-instagram text-accent-first fs-4"></i>
                     </a>
                 </div>
